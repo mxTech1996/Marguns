@@ -2,6 +2,7 @@
 import { FaArrowRight, FaPlay } from 'react-icons/fa';
 import Image from 'next/image';
 import { dataSite } from '@/data';
+import Link from 'next/link';
 
 export default function PartnersSection() {
   return (
@@ -86,13 +87,14 @@ export default function PartnersSection() {
             {dataSite.info[1].description}
           </p>
         </div>
-
-        <button className='flex items-center gap-2 border border-gray-300 rounded-full px-5 py-2 text-sm hover:bg-gray-100 transition'>
-          Explore more
-          <span className='w-6 h-6 flex items-center justify-center rounded-full bg-black text-white'>
-            <FaArrowRight size={10} />
-          </span>
-        </button>
+        <Link href='/#products'>
+          <button className='flex items-center gap-2 border border-gray-300 rounded-full px-5 py-2 text-sm hover:bg-gray-100 transition'>
+            Explore more
+            <span className='w-6 h-6 flex items-center justify-center rounded-full bg-black text-white'>
+              <FaArrowRight size={10} />
+            </span>
+          </button>
+        </Link>
       </div>
     </section>
   );

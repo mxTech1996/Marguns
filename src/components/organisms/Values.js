@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import { useState } from 'react';
 import { FiChevronUp, FiChevronDown, FiArrowUpRight } from 'react-icons/fi';
 
@@ -28,7 +29,10 @@ export default function ValuesSection() {
   };
 
   return (
-    <section className='max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12'>
+    <section
+      id='about'
+      className='max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12'
+    >
       {/* LEFT: Accordion */}
       <div>
         <h2 className='text-4xl font-bold mb-10'>Our values</h2>
@@ -93,12 +97,14 @@ export default function ValuesSection() {
         </div>
 
         {/* CTA */}
-        <button className='mt-8 flex items-center gap-2 border border-gray-300 rounded-full px-5 py-2 text-sm hover:bg-gray-100 transition'>
-          Contact us
-          <span className='w-6 h-6 flex items-center justify-center rounded-full bg-black text-white'>
-            <FiArrowUpRight size={12} />
-          </span>
-        </button>
+        <Link href='/more-information'>
+          <button className='mt-8 flex items-center gap-2 border border-gray-300 rounded-full px-5 py-2 text-sm hover:bg-gray-100 transition'>
+            Contact us
+            <span className='w-6 h-6 flex items-center justify-center rounded-full bg-black text-white'>
+              <FiArrowUpRight size={12} />
+            </span>
+          </button>
+        </Link>
       </div>
     </section>
   );

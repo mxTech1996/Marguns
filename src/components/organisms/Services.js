@@ -4,7 +4,7 @@ import { FiBarChart } from 'react-icons/fi';
 
 export default function ServicesGrid() {
   return (
-    <section className='bg-white px-6 py-20 max-w-7xl mx-auto'>
+    <section id='services' className='bg-white px-6 py-20 max-w-7xl mx-auto'>
       <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
         {dataSite.services.slice(0, 6).map((service, index) => (
           <div

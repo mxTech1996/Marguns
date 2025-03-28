@@ -16,7 +16,7 @@ const Navbar = () => {
         <Link href='/#services' className='hover:text-[#2F5F53] transition'>
           Services
         </Link>
-        <Link href='/#products' className='hover:text-[#2F5F53] transition'>
+        <Link href='/products' className='hover:text-[#2F5F53] transition'>
           Products
         </Link>
         <Link href='/#about' className='hover:text-[#2F5F53] transition'>
@@ -38,9 +38,11 @@ const Navbar = () => {
           all pages
         </Link> */}
 
-        <button className='w-8 h-8 flex items-center justify-center rounded-full bg-red-500 text-white hover:opacity-90 transition'>
-          <FaShoppingCart size={12} />
-        </button>
+        <Link href='/my-cart'>
+          <button className='w-8 h-8 flex items-center justify-center rounded-full bg-red-500 text-white hover:opacity-90 transition'>
+            <FaShoppingCart size={12} />
+          </button>
+        </Link>
       </nav>
     </header>
   );

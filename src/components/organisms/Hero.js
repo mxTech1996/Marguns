@@ -2,6 +2,7 @@
 import { FaArrowRight } from 'react-icons/fa';
 import Image from 'next/image';
 import { dataSite } from '@/data';
+import Link from 'next/link';
 
 export default function HeroSplit() {
   return (
@@ -20,12 +21,14 @@ export default function HeroSplit() {
           <p className='text-gray-600 mb-6 text-sm md:text-base'>
             {dataSite.description}
           </p>
-          <button className='flex items-center gap-2 border border-gray-300 rounded-full px-5 py-2 text-sm hover:bg-gray-100 transition'>
-            Explore more
-            <span className='w-6 h-6 flex items-center justify-center rounded-full bg-black text-white'>
-              <FaArrowRight size={10} />
-            </span>
-          </button>
+          <Link href='/#services'>
+            <button className='flex items-center gap-2 border border-gray-300 rounded-full px-5 py-2 text-sm hover:bg-gray-100 transition'>
+              Explore more
+              <span className='w-6 h-6 flex items-center justify-center rounded-full bg-black text-white'>
+                <FaArrowRight size={10} />
+              </span>
+            </button>
+          </Link>
         </div>
       </div>
 
